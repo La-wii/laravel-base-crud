@@ -7,9 +7,9 @@
         <thead>
             <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Title</th>
+            <th scope="col">Series</th>
+            <th scope="col">Type</th>
             <th scope="col">Button</th>
             </tr>
         </thead>
