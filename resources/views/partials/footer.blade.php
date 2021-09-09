@@ -1,1 +1,1 @@
-<p class="bg-warning text-center">FOOTER</p>
+<p class="bg-warning text-center p-5 mt-5">FOOTER</p>

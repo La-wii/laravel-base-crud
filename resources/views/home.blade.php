@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('title', 'Homepage')
 @section('content')
-<div class="container py-5">
-    <p>ciaooo</p>
-</div>
+<h1>HOME PAGE</h1>
+
 @endsection
