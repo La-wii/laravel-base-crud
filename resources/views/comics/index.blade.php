@@ -3,7 +3,15 @@
 @section('content')
     <!--  start container -->
     <div class="container">
-        <table class="table">
+        <p>
+            @if (session ('deleted'))
+                <div class="alert alert-success">
+                    {{session ('deleted')}}
+                </div>
+            @endif
+        </p>
+        <table class="table">   
+
         <thead>
             <tr>
             <th scope="col">#</th>
@@ -13,7 +21,9 @@
             <th scope="col">Button</th>
             </tr>
         </thead>
+
         <tbody>
+
             @foreach ($fumetti as $fumetto)
                 <tr>
                     <th scope="row">1</th>
@@ -23,9 +33,13 @@
                     <td>
                         <a href="{{ route ('comics.show', $fumetto->id)}}" class="btn btn-primary">Show</a>
                         <a href="{{ route ('comics.edit', $fumetto->id)}}" class="btn btn-success">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <form action="{{ route ('comics.destroy', $fumetto->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>    
                     </td>
-                </tr>
+                </tr>   
             @endforeach
         </tbody>
     </table>
